@@ -105,7 +105,6 @@ public final class SocketTimeoutTest {
           writeFully(socket.getOutputStream(), readableByteCount);
           readFully(socket.getInputStream(), writableByteCount);
           Thread.sleep(5000); // Sleep 5 seconds so the peer can close the connection.
-        } catch (Exception ignored) {
         } finally {
           try {
             if (socket != null) socket.close();
